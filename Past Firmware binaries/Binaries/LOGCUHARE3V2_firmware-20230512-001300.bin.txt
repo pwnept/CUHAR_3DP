@@ -1,0 +1,56 @@
+Send: M122
+Recv: 		X	Y	Z	E
+Recv: Enabled		true	true	true	false
+Recv: Set current	850	780	850	990
+Recv: RMS current	826	764	826	939
+Recv: MAX current	1165	1077	1165	1324
+Recv: Run current	26/31	24/31	26/31	16/31
+Recv: Hold current	13/31	12/31	13/31	8/31
+Recv: CS actual	13/31	12/31	13/31	0/31
+Recv: PWM scale
+Recv: vsense		1=.18	1=.18	1=.18	0=.325
+Recv: stealthChop	true	true	true	false
+Recv: msteps		16	16	16	256
+Recv: interp		true	true	true	false
+Recv: tstep		max	max	max	0
+Recv: PWM thresh.
+Recv: [mm/s]
+Recv: OT prewarn	false	false	false	false
+Recv: pwm scale sum	255	255	255	0
+Recv: pwm scale auto	144	152	144	0
+Recv: pwm offset auto	255	255	255	0
+Recv: pwm grad auto	14	14	14	0
+Recv: off time	4	4	4	0
+Recv: blank time	24	24	24	16
+Recv: hysteresis
+Recv:  -end		2	2	2	-3
+Recv:  -start		1	1	1	1
+Recv: Stallguard thrs
+Recv: uStep count	8	8	8	0
+Recv: DRVSTATUS	X	Y	Z	E
+Recv: sg_result
+Recv: stst					*
+Recv: olb
+Recv: ola
+Recv: s2gb
+Recv: s2ga
+Recv: otpw
+Recv: ot
+Recv: 157C
+Recv: 150C
+Recv: 143C
+Recv: 120C
+Recv: s2vsa
+Recv: s2vsb
+Recv: Driver registers:
+Recv: 		X	0xC0:0D:00:00
+Recv: 		Y	0xC0:0C:00:00
+Recv: 		Z	0xC0:0D:00:00
+Recv: 		E	0x00:00:00:00	 Bad response!
+Recv: 
+Recv: 
+Recv: Testing X connection... OK
+Recv: Testing Y connection... OK
+Recv: Testing Z connection... OK
+Recv: Testing E connection... Error: All LOW
+Recv: ok P15 B15

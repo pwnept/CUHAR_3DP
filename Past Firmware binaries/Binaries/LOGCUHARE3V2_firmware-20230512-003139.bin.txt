@@ -1,0 +1,118 @@
+Changing monitoring state from "Offline" to "Opening serial connection"
+Connecting to port COM18, baudrate 250000
+Changing monitoring state from "Opening serial connection" to "Connecting"
+Connected to: Serial<id=0x20c13bb4580, open=True>(port='COM18', baudrate=250000, bytesize=8, parity='N', stopbits=1, timeout=10.0, xonxoff=False, rtscts=False, dsrdtr=False), starting monitor
+Send: N0 M110 N0*125
+Recv: ok N0 P15 B15
+Send: N0 M110 N0*125
+Changing monitoring state from "Connecting" to "Operational"
+Recv: ok N0 P15 B15
+Send: N0 M110 N0*125
+Recv: ok N0 P15 B15
+Send: N1 M115*39
+Recv: FIRMWARE_NAME:Marlin 2.1.3 MRiscoC Ender3V2-422-MM, based on bugfix-2.1.x (May 12 2023 00:31:59) SOURCE_CODE_URL:github.com/mriscoc/Ender3V2S1 PROTOCOL_VERSION:1.0 MACHINE_TYPE:CUHAR Ender3V2-427-BLTUBL-LA-MPC-IS-NOARC EXTRUDER_COUNT:1 UUID:cede2a2f-41a2-4748-9b12-c55c62f367ff
+Recv: Cap:SERIAL_XON_XOFF:0
+Recv: Cap:BINARY_FILE_TRANSFER:1
+Recv: Cap:EEPROM:1
+Recv: Cap:VOLUMETRIC:1
+Recv: Cap:AUTOREPORT_POS:0
+Recv: Cap:AUTOREPORT_TEMP:1
+Recv: Cap:PROGRESS:0
+Recv: Cap:PRINT_JOB:1
+Recv: Cap:AUTOLEVEL:1
+Recv: Cap:RUNOUT:1
+Recv: Cap:Z_PROBE:1
+Recv: Cap:LEVELING_DATA:1
+Recv: Cap:BUILD_PERCENT:1
+Recv: Cap:SOFTWARE_POWER:0
+Recv: Cap:TOGGLE_LIGHTS:0
+Recv: Cap:CASE_LIGHT_BRIGHTNESS:0
+Recv: Cap:EMERGENCY_PARSER:1
+Recv: Cap:HOST_ACTION_COMMANDS:1
+Recv: Cap:PROMPT_SUPPORT:1
+Recv: Cap:SDCARD:1
+Recv: Cap:MULTI_VOLUME:0
+Recv: Cap:REPEAT:0
+Recv: Cap:SD_WRITE:1
+Recv: Cap:AUTOREPORT_SD_STATUS:0
+Recv: Cap:LONG_FILENAME:1
+Recv: Cap:LFN_WRITE:1
+Recv: Cap:CUSTOM_FIRMWARE_UPLOAD:0
+Recv: Cap:EXTENDED_M20:1
+Recv: Cap:THERMAL_PROTECTION:1
+Recv: Cap:MOTION_MODES:0
+Recv: Cap:ARCS:0
+Recv: Cap:BABYSTEPPING:1
+Recv: Cap:CHAMBER_TEMPERATURE:0
+Recv: Cap:COOLER_TEMPERATURE:0
+Recv: Cap:MEATPACK:0
+Recv: Cap:CONFIG_EXPORT:0
+Recv: area:{full:{min:{x:0.00,y:0.00,z:0.00},max:{x:248.00,y:231.00,z:250.00}},work:{min:{x:0.00,y:0.00,z:0.00},max:{x:230.00,y:230.00,z:250.00}}}
+Recv: ok N1 P15 B15
+Send: M21
+Recv: echo:No SD card
+Recv: ok P15 B15
+Send: M155 S2
+Recv: ok P15 B15
+Send: M876 P1
+Recv: ok P15 B15
+Recv:  T:-15.00 /0.00 B:-15.00 /0.00 @:0 B@:0
+Send: M122
+Recv: 		X	Y	Z	E
+Recv: Enabled		true	true	true	true
+Recv: Set current	850	780	850	990
+Recv: RMS current	826	764	826	939
+Recv: MAX current	1165	1077	1165	1324
+Recv: Run current	26/31	24/31	26/31	16/31
+Recv: Hold current	13/31	12/31	13/31	8/31
+Recv: CS actual	13/31	12/31	13/31	8/31
+Recv: PWM scale
+Recv: vsense		1=.18	1=.18	1=.18	0=.325
+Recv: stealthChop	true	true	true	false
+Recv: msteps		16	16	16	16
+Recv: interp		true	true	true	true
+Recv: tstep		max	max	max	max
+Recv: PWM thresh.
+Recv: [mm/s]
+Recv: OT prewarn	false	false	false	false
+Recv: pwm scale sum	255	255	255	71
+Recv: pwm scale auto	144	152	144	0
+Recv: pwm offset auto	255	255	255	255
+Recv: pwm grad auto	14	14	14	14
+Recv: off time	4	4	4	4
+Recv: blank time	24	24	24	24
+Recv: hysteresis
+Recv:  -end		2	2	2	2
+Recv:  -start		1	1	1	1
+Recv: Stallguard thrs
+Recv: uStep count	8	8	8	8
+Recv: DRVSTATUS	X	Y	Z	E
+Recv: sg_result
+Recv: stst
+Recv: olb					*
+Recv: ola					*
+Recv: s2gb
+Recv: s2ga
+Recv: otpw
+Recv: ot
+Recv: 157C
+Recv: 150C
+Recv: 143C
+Recv: 120C
+Recv: s2vsa
+Recv: s2vsb
+Recv: Driver registers:
+Recv: 		X	0xC0:0D:00:00
+Recv: 		Y	0xC0:0C:00:00
+Recv: 		Z	0xC0:0D:00:00
+Recv: 		E	0x80:08:00:C0
+Recv: 
+Recv: 
+Recv: Testing X connection... OK
+Recv: Testing Y connection... OK
+Recv: Testing Z connection... OK
+Recv: Testing E connection... OK
+Recv: ok P15 B15
+Recv:  T:-15.00 /0.00 B:-15.00 /0.00 @:0 B@:0
+Recv:  T:-15.00 /0.00 B:-15.00 /0.00 @:0 B@:0
+Recv:  T:-15.00 /0.00 B:-15.00 /0.00 @:0 B@:0
