@@ -7,7 +7,8 @@
 ## Software configurations
  - Used Ender3V2S1-20240122 as base code
  - Used [Special_Configurations-main](https://github.com/mriscoc/Special_Configurations/tree/1f203219427769a8674613fe5657bb9468ff2431) to generate Ender3V2-422-BLTUBL-HomeOffs-IS-LA-MPC-Speaker
-
+ - Used [Guide](https://manuelmclure.github.io/ConfiguringLeveling.html#:~:text=The%20world%20of%20UBL%20%2D%20Machine%20limits%20and%20bed%20position,-The%20most%20important&text=It%20has%20a%20physical%20bed,bed%20on%20all%20four%20sides) to set up home offsets
+ - Used [G-Code Generator](https://marlinfw.org/tools/lin_advance/k-factor.html) to set up K factor
 ### Configuration Edits:
 - Settings
   - Default
