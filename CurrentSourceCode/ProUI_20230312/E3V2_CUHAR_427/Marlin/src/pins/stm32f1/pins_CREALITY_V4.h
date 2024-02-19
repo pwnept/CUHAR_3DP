@@ -319,3 +319,6 @@
 #define E0_SERIAL_RX_PIN PC6
 #define TMC_BAUD_RATE 19600
 #endif
+
+// Added this section for chamber temperature sensor
+//#define TEMP_CHAMBER_PIN 
