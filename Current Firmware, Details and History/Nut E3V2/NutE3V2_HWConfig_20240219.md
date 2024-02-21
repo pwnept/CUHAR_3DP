@@ -23,54 +23,109 @@
 - #define STRING_CONFIG_H_AUTHOR
   - `Miguel Risco-Castillo (MRiscoC)`
   - `Nut E3V2`
-- PREHEAT_BEFORE_PROBING
-  - `#define PROBING_BED_TEMP     50`
-  - `#define PROBING_BED_TEMP     60   // Nut E3V2`
 - MPC constants
+  - `#define MPC_HEATER_POWER { 40.0f }                  // (W) Heat cartridge powers.`
   - `#define MPC_BLOCK_HEAT_CAPACITY { 14.40 }           // (J/K) Heat block heat capacities.`
   - `#define MPC_SENSOR_RESPONSIVENESS { 0.2187 }         // (K/s per ∆K) Rate of change of sensor temperature from heat block`.
   - `#define MPC_AMBIENT_XFER_COEFF { 0.1257 }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.`
   - `#define MPC_AMBIENT_XFER_COEFF_FAN255 { 0.1315 }  // (W/K) Heat transfer coefficients from heat block to room air with fan on full.`
   to
-  - `#define MPC_BLOCK_HEAT_CAPACITY { 5.42 }           // (J/K) Heat block heat capacities.`
-  - `#define MPC_SENSOR_RESPONSIVENESS { 0.4040 }         // (K/s per ∆K) Rate of change of sensor temperature from heat block.`
-  - `#define MPC_AMBIENT_XFER_COEFF { 0.0476 }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.`
-  - `#define MPC_AMBIENT_XFER_COEFF_FAN255 { 0.0603 }  // (W/K) Heat transfer coefficients from heat block to room air with fan on full.`
+  - `#define MPC_HEATER_POWER { 50.0f }                  // (W) Heat cartridge powers. // Nut E3V2`
+  - `#define MPC_BLOCK_HEAT_CAPACITY { 6.69 }           // (J/K) Heat block heat capacities.`
+  - `#define MPC_SENSOR_RESPONSIVENESS { 0.3731 }         // (K/s per ∆K) Rate of change of sensor temperature from heat block.`
+  - `#define MPC_AMBIENT_XFER_COEFF { 0.0591 }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.`
+  - `#define MPC_AMBIENT_XFER_COEFF_FAN255 { 0.0783 }  // (W/K) Heat transfer coefficients from heat block to room air with fan on full.`
 - PID constants
   - `#define DEFAULT_bedKp 462.10`
   - `#define DEFAULT_bedKi  85.47`
   - `#define DEFAULT_bedKd 624.59`
   to
-  - `#define DEFAULT_bedKp 285.50`
-  - `#define DEFAULT_bedKi  55.76`
-  - `#define DEFAULT_bedKd 974.51`
+  - `#define DEFAULT_bedKp 213.89 // Nut E3V2`
+  - `#define DEFAULT_bedKi  41.77 // Nut E3V2`
+  - `#define DEFAULT_bedKd 730.07 // Nut E3V2`
 - Steps/mm
   - `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }  // Ender Configs`
   - `#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 415 }  // Ender Configs  // Nut E3V2`
 - Max feedrate
   - `#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 45 }`
   - `#define DEFAULT_MAX_FEEDRATE          { 500, 500, 25, 60 }  // Nut E3V2`
-- Mesh Inset
-  - `#define MESH_INSET 25              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh  `
-  - `#define MESH_INSET 46              // Set Mesh bounds as an inset region of the bed  // Nut E3V2 Center mesh`
-
-
 - Nozzle to probe offset
   - `#define NOZZLE_TO_PROBE_OFFSET { -41.5, -7, 0 }  // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)`
   - `#define NOZZLE_TO_PROBE_OFFSET { 45.5, 13, -1 }  // Ender 3 V2 BMG Mount https://www.thingiverse.com/thing:4441537 // Nut E3V2`
-- Probe Feedrate
+- Probe feedrate
   - `#define XY_PROBE_FEEDRATE (200*60)  // MRiscoC increase travel speed between probes`
   - `#define XY_PROBE_FEEDRATE (300*60)  // Nut E3V2`
+- PREHEAT_BEFORE_PROBING
+  - `#define PROBING_BED_TEMP     50`
+  - `#define PROBING_BED_TEMP     60   // Nut E3V2`
+- Bed size
+  - `#define X_BED_SIZE 235  // MRiscoC Max usable bed size`
+  - `#define Y_BED_SIZE 235  // MRiscoC Max usable bed size`
+  to
+  - `#define X_BED_SIZE 230  // Nut E3V2 Max usable bed size`
+  - `#define Y_BED_SIZE 225  // Nut E3V2 Max usable bed size`
 - Travel limits
     `#define X_MIN_POS 0  // MRiscoC Stock physical limit`
     `#define Y_MIN_POS 0  // MRiscoC Stock physical limit`
     `#define X_MAX_POS 248  // MRiscoC Stock physical limit`
     `#define Y_MAX_POS 231  // MRiscoC Stock physical limit`
+    `#define Z_MAX_POS 250  // Ender Configs`
     to
-    `#define X_MIN_POS -5  // MRiscoC Stock physical limit // Nut E3V2`
-    `#define Y_MIN_POS -5  // MRiscoC Stock physical limit // Nut E3V2`
-    `#define X_MAX_POS 230  // MRiscoC Stock physical limit // Nut E3V2`
-    `#define Y_MAX_POS 225  // MRiscoC Stock physical limit // Nut E3V2`
+    `#define X_MIN_POS -8   // Nut E3V2 Endstop position`
+    `#define Y_MIN_POS -8   // Nut E3V2 Endstop position`
+    `#define X_MAX_POS 230  // Nut E3V2`
+    `#define Y_MAX_POS 225  // Nut E3V2`
+    `#define Z_MAX_POS 240  // Nut E3V2`
+- Mesh Inset
+  - `#define MESH_INSET 25              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh  `
+  - `#define MESH_INSET 46              // Set Mesh bounds as an inset region of the bed  // Nut E3V2 Center mesh`
+- Preheat constants
+  - `#define PREHEAT_1_LABEL       "PLA"`
+    `#define PREHEAT_1_TEMP_HOTEND 195`
+    `#define PREHEAT_1_TEMP_BED     60`
+    `#define PREHEAT_1_TEMP_CHAMBER 35`
+    `#define PREHEAT_1_FAN_SPEED     128 // Value from 0 to 255`
+
+    `#define PREHEAT_2_LABEL       "ABS"`
+    `#define PREHEAT_2_TEMP_HOTEND 240`
+    `#define PREHEAT_2_TEMP_BED     90`
+    `#define PREHEAT_2_TEMP_CHAMBER 35`
+    `#define PREHEAT_2_FAN_SPEED     128 // Value from 0 to 255`
+
+    `#define PREHEAT_3_LABEL       "PETG"`
+    `#define PREHEAT_3_TEMP_HOTEND 230`
+    `#define PREHEAT_3_TEMP_BED     80`
+    `#define PREHEAT_3_FAN_SPEED   128`
+
+    `#define PREHEAT_4_LABEL       "CUSTOM"`
+    `#define PREHEAT_4_TEMP_HOTEND 190`
+    `#define PREHEAT_4_TEMP_BED     50`
+    `#define PREHEAT_4_FAN_SPEED   128`
+
+  - `#define PREHEAT_1_LABEL       "PLA"`
+    `#define PREHEAT_1_TEMP_HOTEND 150`
+    `#define PREHEAT_1_TEMP_BED     60`
+    `#define PREHEAT_1_TEMP_CHAMBER 35`
+    `#define PREHEAT_1_FAN_SPEED    128 // Value from 0 to 255`
+
+    `#define PREHEAT_2_LABEL       "ABS"`
+    `#define PREHEAT_2_TEMP_HOTEND 150`
+    `#define PREHEAT_2_TEMP_BED     90`
+    `#define PREHEAT_2_TEMP_CHAMBER 35`
+    `#define PREHEAT_2_FAN_SPEED    128 // Value from 0 to 255`
+
+    `#define PREHEAT_3_LABEL       "PETG"`
+    `#define PREHEAT_3_TEMP_HOTEND 150`
+    `#define PREHEAT_3_TEMP_BED     80`
+    `#define PREHEAT_3_FAN_SPEED   128`
+
+    `#define PREHEAT_4_LABEL       "CUSTOM"`
+    `#define PREHEAT_4_TEMP_HOTEND 150`
+    `#define PREHEAT_4_TEMP_BED     60`
+    `#define PREHEAT_4_FAN_SPEED   128`
+  
+
+
 
 
 
