@@ -1251,7 +1251,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 25, 60 }  // Nut E3V2
+#define DEFAULT_MAX_FEEDRATE          { 600, 600, 25, 180 }  // Nut E3V2
 
 #define DEFAULT_FEEDRATE_MM_M (50*60)
 
@@ -1266,11 +1266,11 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }  // Ender Configs
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 200, 10000 }  // Nut E3V2
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 9999, 9999, 999, 9999 } // ...or, set your own edit limits  // MRiscoC allows higher limits
+  #define MAX_ACCEL_EDIT_VALUES       { 99999, 99999, 999, 99999 } // ...or, set your own edit limits  // MRiscoC allows higher limits
 #endif
 
 /**
@@ -1281,9 +1281,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender Configs
-#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender Configs
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender Configs
+#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves  // Nut E3V2
+#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts  // Nut E3V2
+#define DEFAULT_TRAVEL_ACCELERATION   2000    // X, Y, Z acceleration for travel (non printing) moves  // Nut E3V2
 
 /**
  * Default Jerk limits (mm/s)
@@ -1295,9 +1295,9 @@
  */
 //#define CLASSIC_JERK  // Ender Configs
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 8.0  // Ender Configs
-  #define DEFAULT_YJERK 8.0  // Ender Configs
-  #define DEFAULT_ZJERK  0.4  // Ender Configs
+  #define DEFAULT_XJERK 16.0  // Ender Configs
+  #define DEFAULT_YJERK 16.0  // Ender Configs
+  #define DEFAULT_ZJERK  0.8  // Ender Configs
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
   //#define DEFAULT_KJERK  0.3
@@ -1576,7 +1576,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 45.5, 13, -1 }  // Ender 3 V2 BMG Mount https://www.thingiverse.com/thing:4441537 // Nut E3V2
+#define NOZZLE_TO_PROBE_OFFSET { 45.5, 13, -1.5 }  // Ender 3 V2 BMG Mount https://www.thingiverse.com/thing:4441537 // Nut E3V2
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1823,8 +1823,8 @@
 #define X_MIN_POS -8   // Nut E3V2 Endstop position
 #define Y_MIN_POS -8   // Nut E3V2 Endstop position
 #define Z_MIN_POS 0
-#define X_MAX_POS 230  // Nut E3V2
-#define Y_MAX_POS 225  // Nut E3V2
+#define X_MAX_POS X_MIN_POS + 235  // Nut E3V2
+#define Y_MAX_POS Y_MIN_POS + 230  // Nut E3V2
 #define Z_MAX_POS 240  // Nut E3V2
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
