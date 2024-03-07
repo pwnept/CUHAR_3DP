@@ -19,7 +19,7 @@
 //#define MachineSermoonD1
 //#define MachineEnder7
 //#define MachineCR10Smart
-#define MachineCR10SmartPro
+// #define MachineCR10SmartPro
 //#define MachineCR5
 
 /*
@@ -2337,6 +2337,7 @@
 #if NONE(Creality422, Creality427, MachineEnder6, MachineEnder7, MachineCR5, MachineEnder2Pro, MachineEnder3S1, MachineCR10SmartPro) && DISABLED(Creality42XUseZMin) || DISABLED(ABL_BLTOUCH)
   #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 #endif
+
 // Force the use of the probe for Z-axis homing
 #define USE_PROBE_FOR_Z_HOMING
 
@@ -2585,7 +2586,7 @@
   #endif
 #elif ANY(MachineCRXPro, MachineEnder3Max, MachineSermoonD1, MachineEnder7, MachineCR5) && ALL(HotendStock, ABL_BLTOUCH)
   #define NOZZLE_TO_PROBE_OFFSET { 48, 3, 0 }
-#elif ANY(MachineCR6, MachineCR6Max, MachineCR10Smart)
+#elif ANY(MachineCR6, MachineCR6Max, MachineCR10Smart, MachineCR10SmartPro)
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0.2 }
 #elif ENABLED(MachineCRX, HotendStock)
    #if ENABLED(ABL_BLTOUCH)
@@ -2607,8 +2608,8 @@
   #define NOZZLE_TO_PROBE_OFFSET { -45, -5, 0 }
 #elif ENABLED(MachineEnder3S1)
   #define NOZZLE_TO_PROBE_OFFSET { -37, -39, -2.0 }
-#elif ENABLED(MachineCR10SmartPro)
-  #define NOZZLE_TO_PROBE_OFFSET { -30, -40, -1.0 }
+//#elif ENABLED(MachineCR10SmartPro)
+//  #define NOZZLE_TO_PROBE_OFFSET { -30, -40, -1.0 }
 #elif (ENABLED(ABL_BLTOUCH) && ENABLED(HotendStock))
   #define NOZZLE_TO_PROBE_OFFSET { -41, -8, 0 }
 #elif ((ANY(ABL_EZABL, ABL_NCSW)) && ENABLED(HotendStock))
@@ -2720,7 +2721,7 @@
 #else
   #define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
 #endif
-#if ANY(MachineCR6, MachineCR6Max, MachineCR10Smart)
+#if ANY(MachineCR6, MachineCR6Max, MachineCR10Smart, MachineCR10SmartPro)
   #define Z_CLEARANCE_BETWEEN_PROBES  3 // Z Clearance between probe points
   #define Z_CLEARANCE_MULTI_PROBE     3 // Z Clearance between multiple probes
 #else
@@ -2731,7 +2732,7 @@
   #define Z_AFTER_PROBING           5 // Z position after probing is done
 #endif
 
-#define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -3 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -9
