@@ -151,7 +151,9 @@
     `#define PREHEAT_4_TEMP_HOTEND 150`
     `#define PREHEAT_4_TEMP_BED     60`
     `#define PREHEAT_4_FAN_SPEED   128`
-
+- Skew Correction
+  - `#define SKEW_CORRECTION`
+  - `#define SKEW_CORRECTION_GCODE`
 #### Configuration_adv.h
 - Linear Advance k factor [Use test G-Code generator](https://marlinfw.org/tools/lin_advance/k-factor.html)
   - `#define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder`
