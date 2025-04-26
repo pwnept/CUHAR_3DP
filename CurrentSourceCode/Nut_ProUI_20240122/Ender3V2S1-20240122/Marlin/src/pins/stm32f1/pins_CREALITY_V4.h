@@ -322,3 +322,18 @@
   #define SPINDLE_DIR_PIN                   PC0   // FET 4
   #define LASER_SOFT_PWM_PIN                PC0
 #endif
+
+
+
+// Added this section for TMC2208 uart control - Requires hardware modification
+#if HAS_TMC_UART
+#define X_SERIAL_TX_PIN PC6 // Use LCD connector pin closest to MCU 
+#define X_SERIAL_RX_PIN PC6
+#define Y_SERIAL_TX_PIN PB2 // Use LCD connector pin to the right of above, USB port on the right
+#define Y_SERIAL_RX_PIN PB2
+#define Z_SERIAL_TX_PIN PA13 // Reuse SWDIO 'debug' header pin next to LCD socket, unpopulated on 4.2.7 boards
+#define Z_SERIAL_RX_PIN PA13
+#define E0_SERIAL_TX_PIN PA14 // Reuse SCLK 'debug' header pin next to LCD socket, unpopulated on 4.2.7 boards
+#define E0_SERIAL_RX_PIN PA14
+#define TMC_BAUD_RATE 19600
+#endif

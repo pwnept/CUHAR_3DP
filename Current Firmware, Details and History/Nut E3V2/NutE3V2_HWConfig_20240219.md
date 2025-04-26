@@ -106,7 +106,10 @@
     - `#define Z_MAX_POS 240  // Nut E3V2`
 - Mesh Inset
   - `#define MESH_INSET 25              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh  `
-  - `#define MESH_INSET 46              // Set Mesh bounds as an inset region of the bed  // Nut E3V2 Center mesh`
+  - `#define MESH_INSET 42              // Set Mesh bounds as an inset region of the bed  // Nut E3V2 Center mesh`
+- Probing pattern
+  - `//#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points`
+  - `#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points`
 - Preheat constants
   - `#define PREHEAT_1_LABEL       "PLA"`
     `#define PREHEAT_1_TEMP_HOTEND 195`
@@ -154,6 +157,7 @@
 - Skew Correction
   - `#define SKEW_CORRECTION`
   - `#define SKEW_CORRECTION_GCODE`
+- 
 #### Configuration_adv.h
 - Linear Advance k factor [Use test G-Code generator](https://marlinfw.org/tools/lin_advance/k-factor.html)
   - `#define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder`
